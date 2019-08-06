@@ -1,6 +1,6 @@
 ---
 applications:
-- name: spring-music
+- name: another-app
   memory: 1G
   random-route: true
   instances: 3

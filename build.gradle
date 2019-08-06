@@ -1,7 +1,7 @@
 buildscript {
     ext {
-        springBootVersion = '2.0.1.RELEASE'
-        springCloudConnectorsVersion = '2.0.1.RELEASE'
+        springBootVersion = '2.1.6.RELEASE'
+        springCloudConnectorsVersion = '2.0.6.RELEASE'
     }
 
     repositories {
@@ -30,7 +30,10 @@ targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
     mavenLocal()
+    maven { url "http://repo.spring.io/libs-milestone" }
+    maven { url "http://repo.spring.io/libs-snapshot" }
 }
 
 dependencies {
@@ -44,6 +47,16 @@ dependencies {
     // Spring Cloud Connectors
     compile "org.springframework.cloud:spring-cloud-spring-service-connector:${springCloudConnectorsVersion}"
     compile "org.springframework.cloud:spring-cloud-cloudfoundry-connector:${springCloudConnectorsVersion}"
+
+
+    compile 'io.micrometer.prometheus:prometheus-rsocket-client:0.8.0-SNAPSHOT'
+    compile 'io.micrometer.prometheus:prometheus-rsocket-spring:0.8.0-SNAPSHOT'
+
+
+// https://mvnrepository.com/artifact/io.rsocket/rsocket-core
+    compile group: 'io.rsocket', name: 'rsocket-core', version: '1.0.0-RC2'
+    compile group: 'io.rsocket', name: 'rsocket-transport-netty', version: '1.0.0-RC2'
+
 
     // JPA Persistence
     runtime "org.apache.commons:commons-pool2:2.6.0"

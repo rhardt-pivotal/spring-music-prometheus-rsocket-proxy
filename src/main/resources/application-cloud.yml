@@ -1,0 +1,15 @@
+management:
+  metrics:
+    export:
+      prometheus:
+        rsocket:
+          host: prom-proxy.apps.internal
+          port: 7001
+          max-retries: 10000
+          first-backoff: 10
+          max-backoff: 10
+
+
+logging:
+  level:
+    root: debug

@@ -7,7 +7,16 @@ management:
     web:
       exposure:
         include: "*"
+  metrics:
+    export:
+      prometheus:
+        enabled: true
 
+
+
+logging:
+  level:
+    root: debug
 ---
 spring:
   profiles: mysql

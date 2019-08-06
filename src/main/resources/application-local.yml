@@ -1,0 +1,18 @@
+management:
+  metrics:
+    export:
+      prometheus:
+        rsocket:
+          host: localhost # must have the proxy running locally on 7001
+          port: 7001
+          max-retries: 10000
+          first-backoff: 10
+          max-backoff: 10
+
+
+logging:
+  level:
+    root: debug
+
+server:
+  port: 8082

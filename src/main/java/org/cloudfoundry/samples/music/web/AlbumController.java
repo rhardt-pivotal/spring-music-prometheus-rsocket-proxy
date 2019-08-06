@@ -1,5 +1,6 @@
 package org.cloudfoundry.samples.music.web;
 
+import io.micrometer.prometheus.rsocket.PrometheusRSocketClient;
 import org.cloudfoundry.samples.music.domain.Album;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
