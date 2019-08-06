@@ -32,6 +32,7 @@ Now you should be able to deploy this app and point it to the proxy app you depl
 From the root dir of this project...
 * If you changed the 'apps.internal' route of the proxy app in the previous step, edit `src/resources/application-cloud.yml` to reflect the new path.
 ~~~
+$ cd spring-music-prometheus-rsocket-proxy
 $ ./gradlew clean build
 $ cf push  # manifest.yml specifies 3 instances
 ~~~
